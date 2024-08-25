@@ -1,0 +1,1 @@
+Navbar added in user panel

@@ -1,0 +1,10 @@
+{
+  "data": [
+    { "name": "Home", "link": "network/addcontact" },
+    { "name": "Services", "link": "network/addcontact" },
+    { "name": "About ", "link": "network/addcontact" },
+    { "name": "Projects ", "link": "network/addcontact" },
+    { "name": "Testimonials ", "link": "network/addcontact" },
+    { "name": "Contact ", "link": "network/addcontact" }
+  ]
+}
