@@ -3,9 +3,9 @@ import Compressor from 'compressorjs';
 import { createProject, deleteProject, fetchProjects, updateProject } from '../../services/admin-projects';
 
 
-const ProjectManager = () => {
+const ClientManager = () => {
   const [projects, setProjects] = useState([]);
-  const [form, setForm] = useState({ id: '', image: '', projectName: '', description: '' });
+  const [form, setForm] = useState({ id: '', image: '', projectName: '', description: '', position: '' });
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const ProjectManager = () => {
     const file = e.target.files[0];
     if (file) {
       new Compressor(file, {
-        quality: 0.8, 
+        quality: 0.8, // Adjust quality as needed
         success(result) {
           const reader = new FileReader();
           reader.onloadend = () => {
@@ -84,7 +84,7 @@ const ProjectManager = () => {
   };
 
   const resetForm = () => {
-    setForm({ id: '', image: '', projectName: '', description: '' });
+    setForm({ id: '', image: '', projectName: '', description: '', position: ''  });
     setIsEditing(false);
   };
 
@@ -153,4 +153,4 @@ const ProjectManager = () => {
   );
 };
 
-export default ProjectManager;
+export default ClientManager;

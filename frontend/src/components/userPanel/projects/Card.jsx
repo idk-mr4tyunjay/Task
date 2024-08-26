@@ -1,37 +1,21 @@
-const projects = [
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project One",
-    description: "This is a description of .",
-  },
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project Two",
-    description: "This is a description of .",
-  },
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project Three",
-    description: "This is a description of .",
-  },
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project Two",
-    description: "This is a description of .",
-  },
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project Three",
-    description: "This is a description of .",
-  },
-  {
-    image: "src/assets/images/project.svg",
-    name: "Project Three",
-    description: "This is a description of .",
-  },
-];
+import { useEffect, useState } from "react";
+import { fetchProjects } from "../../../services/admin-projects";
 
 const Card = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const projects = await fetchProjects();
+        setProjects(projects);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+    
+    getProjects();
+  }, []);
+
   return (
     <>
       <div className="d-flex m-5">
