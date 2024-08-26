@@ -22,17 +22,44 @@ background-color: #ebf1ff8f;
 }
 
 .transparent-input {
-  background-color: transparent; /* Makes the background transparent */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
-  color: white; /* Keeps text readable */
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  color: white; 
 }
 
 .transparent-input::placeholder {
-  color: white; /* Makes the placeholder text white */
-  opacity: 1;   /* Ensures the placeholder is fully opaque */
+  color: white; 
+  opacity: 1;   
 }
 .transparent-input:focus {
-  background-color: transparent; /* Keeps the background transparent */
-  border: 1px solid rgba(255, 255, 255, 0.7); /* Optional: Slightly different border color if needed */
-  outline: none; /* Removes the default focus outline */
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7); 
+  outline: none; 
+}
+
+.active {
+  text-decoration: none;
+  color: #F46D21; 
+  border-bottom: 2px solid #007bff;
+}
+.navi{
+  text-decoration: none;
+}
+.svg{
+  color: white;
+  background-color: white;
+}
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.5); 
+}
+.hover-z {
+  transition: transform 0.5s ease;
+}
+
+.hover-z:hover {
+  transform: scale(1.1); 
 }

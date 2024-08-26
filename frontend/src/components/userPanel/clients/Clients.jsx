@@ -18,14 +18,14 @@ const Clients = () => {
   
   return (
     <>
-      <div className="my-5">
+      <div className="my-5" id="testimonials">
         <div className="d-flex flex-column align-items-center">
             <h1 className="text-center w-50 txt-blu">
                 Happy Clients
             </h1>
-            <img src="src/assets/shapes/Rectangle58.svg" alt="underline" className="py-3"/>
+            <img src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724673174/Rectangle_58_mf31eo.svg" alt="underline" className="py-3"/>
         </div>
-        <div className="pb-5">
+        <div className="pb-5 ">
             <Card clients={clients}/>
         </div>
       </div>

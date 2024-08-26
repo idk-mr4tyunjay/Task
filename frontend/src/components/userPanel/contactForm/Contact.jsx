@@ -3,7 +3,8 @@ import Form from "./Form";
 const Contact = () => {
   return (
     <>
-      <div className="position-relative">
+    <section id="home">
+      <div className="position-relative" >
         <img
           src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672805/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home_1_bit5q0.svg"
           alt="couple"
@@ -21,6 +22,7 @@ const Contact = () => {
             <Form/>
         </div>
       </div>
+      </section>
     </>
   );
 };

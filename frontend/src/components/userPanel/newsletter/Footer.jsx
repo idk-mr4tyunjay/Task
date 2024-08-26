@@ -20,7 +20,7 @@ const Footer = () => {
   };
   return (
     <>
-      <div className="position-relative">
+      <div className="position-relative" id="footer">
         <div className="">
           <img
             src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672784/Rectangle_fyxxos.svg"
@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="d-flex align-items-center justify-content-center">
             {Data.data.map((item, i) => (
               <div key={i} className="px-4">
-                <p className="p-0 m-0">{item.name}</p>
+                <p className="p-0 m-0 hover-zoom">{item.name}</p>
               </div>
             ))}
           </div>
@@ -76,34 +76,34 @@ const Footer = () => {
         </div>
         <div className="d-flex justify-content-between align-items-center bg-dark p-3 text-light">
           <div>
-            <p className="p-0 m-0">Lorem, ipsum dolor.</p>
+            <p className="p-0 m-0 ">Lorem, ipsum dolor.</p>
           </div>
-          <div>
+          <div className="svg rounded p-2" >
             <img
               src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672795/logo_s84s9j.svg"
               alt="logo"
             />
           </div>
-          <div className="">
+          <div className="svg rounded">
             <img
               src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Group-1_vtnrhv.svg"
               alt="logo"
-              className="p-2"
+              className="p-2 hover-zoom"
             />
             <img
               src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Group_tzgp4r.svg"
               alt="logo"
-              className="p-2"
+              className="p-2 hover-zoom"
             />
             <img
               src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Linkedin_mn0i5a.svg"
               alt="logo"
-              className="p-2"
+              className="p-2 hover-zoom"
             />
             <img
               src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Frame_w90z9i.svg"
               alt="logo"
-              className="p-2"
+              className="p-2 hover-zoom"
             />
           </div>{" "}
         </div>

@@ -89,80 +89,82 @@ const ClientManager = () => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center mt-5">
-  <div className="w-50">
-      <h2 className="mb-4 text-center">{isEditing ? 'Update Client' : 'Add New Client'}</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Client Name</label>
-          <input
-            type="text"
-            className="form-control"
-            name="name" 
-            value={form.name} 
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Position</label>
-          <input
-            type="text"
-            className="form-control"
-            name="position"
-            value={form.position}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Description</label>
-          <textarea
-            className="form-control"
-            name="description"
-            value={form.description}
-            onChange={handleInputChange}
-            required
-          ></textarea>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Image</label>
-          <input
-            type="file"
-            className="form-control"
-            onChange={handleFileChange}
-            accept="image/*"
-          />
-          {form.image && <img src={form.image} alt="Client" className="mt-2" style={{ maxWidth: '200px' }} />}
-        </div>
-        <button type="submit" className="btn btn-primary">
-          {isEditing ? 'Update Client' : 'Add Client'}
-        </button>
-        {isEditing && (
-          <button type="button" className="btn btn-secondary ms-2" onClick={resetForm}>
-            Cancel
-          </button>
-        )}
-      </form>
-      </div>
-      <h2 className="mt-5">Clients List</h2>
-      <div className=" d-flex">
-        {clients.map((client) => (
-          <div key={client.id} className="list-group-item d-flex justify-content-between align-items-center d-flex flex-column flex-wrap">
-            <div>
-              {client.image && <img src={client.image} alt={client.name} style={{ maxWidth: '100px' }} />}
-              <h5 className="mt-2">{client.name}</h5>
-              <p>{client.description}</p>
-              <p>{client.position}</p>
-            </div>
-            <div>
-              <button className="btn btn-warning btn-sm me-2" onClick={() => handleEdit(client)}>Edit</button>
-              <button className="btn btn-danger btn-sm" onClick={() => handleDelete(client._id)}>Delete</button>
-            </div>
+<section id='clients'>
+      <div className="d-flex flex-column align-items-center justify-content-center mt-5" >
+    <div className="w-50">
+        <h2 className="mb-4 text-center">{isEditing ? 'Update Client' : 'Add New Client'}</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Client Name</label>
+            <input
+              type="text"
+              className="form-control"
+              name="name" 
+              value={form.name} 
+              onChange={handleInputChange}
+              required
+            />
           </div>
-        ))}
+          <div className="mb-3">
+            <label className="form-label">Position</label>
+            <input
+              type="text"
+              className="form-control"
+              name="position"
+              value={form.position}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Description</label>
+            <textarea
+              className="form-control"
+              name="description"
+              value={form.description}
+              onChange={handleInputChange}
+              required
+            ></textarea>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Image</label>
+            <input
+              type="file"
+              className="form-control"
+              onChange={handleFileChange}
+              accept="image/*"
+            />
+            {form.image && <img src={form.image} alt="Client" className="mt-2" style={{ maxWidth: '200px' }} />}
+          </div>
+          <button type="submit" className="btn btn-primary">
+            {isEditing ? 'Update Client' : 'Add Client'}
+          </button>
+          {isEditing && (
+            <button type="button" className="btn btn-secondary ms-2" onClick={resetForm}>
+              Cancel
+            </button>
+          )}
+        </form>
+        </div>
+        <h2 className="mt-5">Clients List</h2>
+        <div className=" d-flex">
+          {clients.map((client) => (
+            <div key={client.id} className="list-group-item d-flex justify-content-between align-items-center d-flex flex-column flex-wrap">
+              <div>
+                {client.image && <img src={client.image} alt={client.name} style={{ maxWidth: '100px' }} />}
+                <h5 className="mt-2">{client.name}</h5>
+                <p>{client.description}</p>
+                <p>{client.position}</p>
+              </div>
+              <div>
+                <button className="btn btn-warning btn-sm me-2" onClick={() => handleEdit(client)}>Edit</button>
+                <button className="btn btn-danger btn-sm" onClick={() => handleDelete(client._id)}>Delete</button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+</section>
   );
 };
 

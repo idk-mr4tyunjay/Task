@@ -5,7 +5,7 @@ const Card = ({ clients }) => {
         {clients.map((item, index) => (
           <div
             key={index}
-            className="d-flex flex-column justify-content-between align-items-center m-3 bg-light rounded p-3 shadow-lg"
+            className="d-flex flex-column justify-content-between align-items-center m-3 bg-light rounded p-3 shadow-lg hover-z"
           >
             <img
               src={item.image}

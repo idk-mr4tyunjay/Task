@@ -1,10 +1,9 @@
 {
   "data": [
-    { "name": "Home", "link": "network/addcontact" },
-    { "name": "Services", "link": "network/addcontact" },
-    { "name": "About ", "link": "network/addcontact" },
-    { "name": "Projects ", "link": "network/addcontact" },
-    { "name": "Testimonials ", "link": "network/addcontact" },
-    { "name": "Contact ", "link": "network/addcontact" }
+    { "name": "Home", "link": "home" },
+    { "name": "Services", "link": "services" },
+    { "name": "About ", "link": "about" },
+    { "name": "Projects ", "link": "projects" },
+    { "name": "Testimonials ", "link": "testimonials" }
   ]
 }

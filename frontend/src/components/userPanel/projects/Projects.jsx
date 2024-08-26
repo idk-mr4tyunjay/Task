@@ -18,7 +18,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="my-5 bg-blu">
+      <div className="my-5 bg-blu" id="projects">
         <div className="d-flex flex-column align-items-center text-center">
             <h1 className=" w-50 txt-blu pt-5">
                 Our Projects

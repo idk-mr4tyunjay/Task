@@ -15,8 +15,8 @@ const Card = ({projects}) => {
             />
             <h3>{project.name}</h3>
             <p className="p-0 m-0 fw-semibold">{project.description}</p>
-            <div className=" bg-orange w-75 rounded d-flex justify-content-center align-items-center p-1">
-              <p className="p-0 m-0 fw-semibold  text-light">See More</p>
+            <div className="hover-z  bg-orange w-75 rounded d-flex justify-content-center align-items-center p-1 mt-4">
+              <p className="p-0 m-0 fw-semibold  text-light ">See More</p>
             </div>
           </div>
         ))}

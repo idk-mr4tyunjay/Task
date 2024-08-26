@@ -1,7 +1,7 @@
 const Promo = () => {
   return (
     <>
-      <div className="d-flex h-100">
+      <div className="d-flex h-100 " id="services">
         <div className="d-flex flex-column align-items-center justify-content-center" style={{width:"40vw"}}>
           <h1 className="txt-blu">Not Your Average Realtor</h1>
           <p className="text-center">Lorem ipsum dolor sit amet, elit. Sed nobis suscipit fugit culpa, eveniet corrupti quo eius, iusto perspiciatis, repellendus sequi odit minus animi asperiores cumque ratione nemo </p>
