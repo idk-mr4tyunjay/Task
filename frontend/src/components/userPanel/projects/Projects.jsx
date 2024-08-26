@@ -18,12 +18,12 @@ const Projects = () => {
 
   return (
     <>
-      <div className="my-5">
+      <div className="my-5 bg-blu">
         <div className="d-flex flex-column align-items-center text-center">
-            <h1 className=" w-50 txt-blu">
+            <h1 className=" w-50 txt-blu pt-5">
                 Our Projects
             </h1>
-            <img src="src/assets/shapes/Rectangle58.svg" alt="underline" className="py-3"/>
+            <img src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724673174/Rectangle_58_mf31eo.svg" alt="underline" className="py-3"/>
             <p className="w-50 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius excepturi, dolor nemo maxime consequuntur numquam! Ipsa architecto laborum neque animi.</p>
         </div>
         <div className="pb-5">

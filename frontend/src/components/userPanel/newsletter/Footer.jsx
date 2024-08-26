@@ -11,7 +11,7 @@ const Footer = () => {
 
     try {
       await createNews({ email });
-      setSuccess('Subscription successful!');
+      setSuccess("Subscription successful!");
       setEmail("");
     } catch (error) {
       setError("Email already exists");
@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="position-relative">
         <div className="">
           <img
-            src="src/assets/images/rectangle.svg"
+            src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672784/Rectangle_fyxxos.svg"
             alt="footer image"
             className="w-100"
             style={{ display: "block", filter: "brightness(25%)" }}
@@ -41,7 +41,9 @@ const Footer = () => {
             Learn more about our listing process as well as our <br />{" "}
             additional staging and design work
           </h2>
-          <button className="w-25 mt-4 text-primary fw-semibold rounded">newsletter</button>
+          <button className="w-25 mt-4 text-primary fw-semibold rounded">
+            newsletter
+          </button>
         </div>
         <div className="d-flex justify-content-around align-items-center bg-primary p-3 text-light">
           <div className="d-flex align-items-center justify-content-center">
@@ -64,7 +66,9 @@ const Footer = () => {
                 required
                 placeholder="Enter your email"
               />
-              <button type="submit" className="fw-semibold rounded ">Subscribe</button>
+              <button type="submit" className="fw-semibold rounded ">
+                Subscribe
+              </button>
             </form>
             {error && <p style={{ color: "red" }}>{error}</p>}
             {success && <p style={{ color: "green" }}>{success}</p>}
@@ -75,18 +79,29 @@ const Footer = () => {
             <p className="p-0 m-0">Lorem, ipsum dolor.</p>
           </div>
           <div>
-            <img src="src/assets/images/logo.svg" alt="logo" />
+            <img
+              src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672795/logo_s84s9j.svg"
+              alt="logo"
+            />
           </div>
           <div className="">
-            <img src="src/assets/icons/frame.svg" alt="logo" className="p-2" />
             <img
-              src="src/assets/icons/group-1.svg"
+              src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Group-1_vtnrhv.svg"
               alt="logo"
               className="p-2"
             />
-            <img src="src/assets/icons/group.svg" alt="logo" className="p-2" />
             <img
-              src="src/assets/icons/linkedin.svg"
+              src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Group_tzgp4r.svg"
+              alt="logo"
+              className="p-2"
+            />
+            <img
+              src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Linkedin_mn0i5a.svg"
+              alt="logo"
+              className="p-2"
+            />
+            <img
+              src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672475/Frame_w90z9i.svg"
               alt="logo"
               className="p-2"
             />

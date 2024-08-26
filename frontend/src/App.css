@@ -7,6 +7,9 @@
 .bg-orange{
   background-color:#F46D21;
 }
+.bg-blu{
+background-color: #ebf1ff8f;
+}
 
 .rotate-90 {
   transform: rotate(-50deg);

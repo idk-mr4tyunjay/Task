@@ -5,7 +5,7 @@ const Contact = () => {
     <>
       <div className="position-relative">
         <img
-          src="src/assets/images/couple.svg"
+          src="https://res.cloudinary.com/dqhtnjrzm/image/upload/v1724672805/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home_1_bit5q0.svg"
           alt="couple"
           className="img-fluid w-100"
         />

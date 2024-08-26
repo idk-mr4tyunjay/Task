@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:4000/api/news';
+const API_BASE_URL = 'https://hackathon-backend-y30v.onrender.com/api/news';
 
 export const fetchNews = async () => {
     try {

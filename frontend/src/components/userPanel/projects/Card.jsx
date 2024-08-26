@@ -1,7 +1,7 @@
 const Card = ({projects}) => {
   return (
     <>
-      <div className="d-flex m-5">
+      <div className="d-flex my-5">
         {projects.map((project, index) => (
           <div
             key={index}
