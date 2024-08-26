@@ -1,6 +1,10 @@
 .transparent-background {
   background-color: rgba(23, 23, 232, 0.5); 
 }
+.txt-blu{
+  color: #3777D3;
+}
+
 .rotate-90 {
   transform: rotate(-50deg);
 }
