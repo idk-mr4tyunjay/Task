@@ -1,6 +1,21 @@
 import Card from "./Card";
+import { useEffect, useState } from "react";
+import { fetchProjects } from "../../../services/admin-projects";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const projects = await fetchProjects();
+        setProjects(projects);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+    getProjects();
+  }, []);
+
   return (
     <>
       <div className="my-5">
@@ -12,7 +27,7 @@ const Projects = () => {
             <p className="w-50 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius excepturi, dolor nemo maxime consequuntur numquam! Ipsa architecto laborum neque animi.</p>
         </div>
         <div className="pb-5">
-            <Card/>
+            <Card projects={projects}/>
         </div>
       </div>
     </>

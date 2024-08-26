@@ -8,3 +8,9 @@
 .rotate-90 {
   transform: rotate(-50deg);
 }
+.round-image {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
+}

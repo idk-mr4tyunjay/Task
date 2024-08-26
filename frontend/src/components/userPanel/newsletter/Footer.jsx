@@ -1,13 +1,42 @@
+import { useState } from "react";
 import Data from "../../../static/navbar.json";
+import { createNews } from "../../../services/admin-news";
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await createNews({ email });
+      setSuccess('Subscription successful!');
+      setEmail("");
+    } catch (error) {
+      setError("Email already exists");
+      console.error("Error details:", error);
+    }
+  };
   return (
     <>
       <div className="position-relative">
         <div className="">
-          <img src="src/assets/images/rectangle.svg" alt="footer image" className="w-100" style={{ display: 'block', filter: 'brightness(25%)' }}
+          <img
+            src="src/assets/images/rectangle.svg"
+            alt="footer image"
+            className="w-100"
+            style={{ display: "block", filter: "brightness(25%)" }}
           />
         </div>{" "}
-        <div className="d-flex flex-column justify-content-center align-items-center position-absolute " style={{ top: '30%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+        <div
+          className="d-flex flex-column justify-content-center align-items-center position-absolute "
+          style={{
+            top: "30%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
           <h2 className="text-center text-light">
             Learn more about our listing process as well as our <br />{" "}
             additional staging and design work
@@ -23,11 +52,22 @@ const Footer = () => {
             ))}
           </div>
           <div>
-            <label htmlFor="" className="pe-5">
-              subcribe to
-            </label>
-            <input type="text" />
-            <button>subscribe</button>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="email" className="pe-5">
+                Subscribe to
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="Enter your email"
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            {success && <p style={{ color: "green" }}>{success}</p>}
           </div>
         </div>
         <div className="d-flex justify-content-between align-items-center bg-dark p-3 text-light">

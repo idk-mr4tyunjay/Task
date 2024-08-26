@@ -1,21 +1,4 @@
-import { useEffect, useState } from "react";
-import { fetchProjects } from "../../../services/admin-projects";
-
-const Card = () => {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    const getProjects = async () => {
-      try {
-        const projects = await fetchProjects();
-        setProjects(projects);
-      } catch (error) {
-        console.error('Error fetching projects:', error);
-      }
-    };
-    
-    getProjects();
-  }, []);
-
+const Card = ({projects}) => {
   return (
     <>
       <div className="d-flex m-5">

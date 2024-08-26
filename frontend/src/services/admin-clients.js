@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:4000/api/clients';
 
-export const fetchclients = async () => {
+export const fetchClients = async () => {
   try {
     const response = await axios.get(API_BASE_URL);
     return response.data;
@@ -11,7 +11,7 @@ export const fetchclients = async () => {
   }
 };
 
-export const createclient = async (clientData) => {
+export const createClient = async (clientData) => {
   try {
     const response = await axios.post(API_BASE_URL, clientData);
     return response.data;
@@ -20,7 +20,7 @@ export const createclient = async (clientData) => {
   }
 };
 
-export const updateclient = async (id, clientData) => {
+export const updateClient = async (id, clientData) => {
   try {
     const response = await axios.put(`${API_BASE_URL}/${id}`, clientData);
     return response.data;
@@ -29,7 +29,7 @@ export const updateclient = async (id, clientData) => {
   }
 };
 
-export const deleteclient = async (id) => {
+export const deleteClient = async (id) => {
   try {
     const response = await axios.delete(`${API_BASE_URL}/${id}`);
     return response.data;
