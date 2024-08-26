@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Compressor from 'compressorjs';
 import { createProject, deleteProject, fetchProjects, updateProject } from '../../services/admin-projects';
+import ImageCropper from './ImageCropper';
 
 
 const ProjectManager = () => {
@@ -24,6 +25,10 @@ const ProjectManager = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
+  };
+
+  const handleImageCropped = (croppedImage) => {
+    setForm((prevForm) => ({ ...prevForm, image: croppedImage }));
   };
 
   const handleFileChange = (e) => {
@@ -89,54 +94,57 @@ const ProjectManager = () => {
   };
 
   return (
-    <div>
-      <h2 className="mb-4">{isEditing ? 'Update Project' : 'Add New Project'}</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Project Name</label>
-          <input
-            type="text"
-            className="form-control"
-            name="projectName"
-            value={form.projectName}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Description</label>
-          <textarea
-            className="form-control"
-            name="description"
-            value={form.description}
-            onChange={handleInputChange}
-            required
-          ></textarea>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Image</label>
-          <input
-            type="file"
-            className="form-control"
-            onChange={handleFileChange}
-            accept="image/*"
-          />
-          {form.image && <img src={form.image} alt="Project" className="mt-2" style={{ maxWidth: '200px' }} />}
-        </div>
-        <button type="submit" className="btn btn-primary">
-          {isEditing ? 'Update Project' : 'Add Project'}
-        </button>
-        {isEditing && (
-          <button type="button" className="btn btn-secondary ms-2" onClick={resetForm}>
-            Cancel
+    <div className="d-flex flex-column align-items-center justify-content-center">
+  <div className="w-50">
+        <h2 className="mb-4 text-center">{isEditing ? 'Update Project' : 'Add New Project'}</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Project Name</label>
+            <input
+              type="text"
+              className="form-control"
+              name="projectName"
+              value={form.projectName}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Description</label>
+            <textarea
+              className="form-control"
+              name="description"
+              value={form.description}
+              onChange={handleInputChange}
+              required
+            ></textarea>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Image</label>
+            <input
+              type="file"
+              className="form-control"
+              onChange={handleFileChange}
+              accept="image/*"
+            />
+          <ImageCropper onImageCropped={handleImageCropped} />
+            {form.image && <img src={form.image} alt="Project" className="mt-2" style={{ maxWidth: '200px' }} />}
+          </div>
+          <button type="submit" className="btn btn-primary">
+            {isEditing ? 'Update Project' : 'Add Project'}
           </button>
-        )}
-      </form>
+          {isEditing && (
+            <button type="button" className="btn btn-secondary ms-2" onClick={resetForm}>
+              Cancel
+            </button>
+          )}
+        </form>
+     </div>
 
       <h2 className="mt-5">Projects List</h2>
-      <div className="list-group">
+      <div className="d-flex">
         {projects.map((project) => (
-          <div key={project.id} className="list-group-item d-flex justify-content-between align-items-center">
+          <div key={project.id} className="list-group-item d-flex justify-content-between align-items-center flex-column flex-wrap p-2">
             <div>
               {project.image && <img src={project.image} alt={project.projectName} style={{ maxWidth: '100px' }} />}
               <h5 className="mt-2">{project.projectName}</h5>

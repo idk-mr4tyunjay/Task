@@ -49,7 +49,7 @@ const Promo3 = () => {
           </p>
         </div>
         <div>
-          <button className="my-5">button</button>
+          <button className="my-5 rounded fw-semibold bg-light txt-blu px-5 py-1 border border-primary">Learn More</button>
         </div>
       </div>
     </>

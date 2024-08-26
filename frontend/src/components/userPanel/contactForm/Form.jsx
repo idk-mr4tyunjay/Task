@@ -50,7 +50,7 @@ const Form = () => {
     >
       <div className="d-flex flex-column align-items-center justify-content-center h-100">
         <h2
-          className="text-light text-center pb-4"
+          className="text-light fw-semibold text-center pb-4"
           style={{ lineHeight: "1" }}
         >
           Get a Free <br /> Consultation
@@ -65,10 +65,10 @@ const Form = () => {
                 type="text"
                 id="fullName"
                 name="fullName"
-                placeholder="John Doe"
+                placeholder="ex:John Doe"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control transparent-input text-light"
               />
               {errors.fullName && <div className="text-danger">{errors.fullName}</div>}
             </div>
@@ -80,10 +80,10 @@ const Form = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="user@gmail.com"
+                placeholder="ex:user@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control transparent-input text-light"
               />
               {errors.email && <div className="text-danger">{errors.email}</div>}
             </div>
@@ -95,10 +95,10 @@ const Form = () => {
                 type="text"
                 id="mobile"
                 name="mobile"
-                placeholder="987654321"
+                placeholder="ex:987654321"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control transparent-input text-light"
               />
               {errors.mobile && <div className="text-danger">{errors.mobile}</div>}
             </div>
@@ -110,14 +110,14 @@ const Form = () => {
                 type="text"
                 id="city"
                 name="city"
-                placeholder="Mumbai"
+                placeholder="ex:Mumbai"
                 value={formData.city}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control transparent-input text-light"
               />
               {errors.city && <div className="text-danger">{errors.city}</div>}
             </div>
-            <button type="submit" className="btn btn-primary w-100">
+            <button type="submit" className="btn bg-orange text-light fw-semibold w-100">
               Submit
             </button>
             {success && <div className="text-success mt-3">{success}</div>}

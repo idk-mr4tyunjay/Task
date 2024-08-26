@@ -14,9 +14,9 @@ const Card = ({projects}) => {
               style={{ height: "230px", width: "270px", objectFit: "cover" }}
             />
             <h3>{project.name}</h3>
-            <p className="p-0 m-0">{project.description}</p>
-            <div className=" bg-danger w-75 d-flex justify-content-center align-items-center">
-              <p className="p-0 m-0">See More</p>
+            <p className="p-0 m-0 fw-semibold">{project.description}</p>
+            <div className=" bg-orange w-75 rounded d-flex justify-content-center align-items-center p-1">
+              <p className="p-0 m-0 fw-semibold  text-light">See More</p>
             </div>
           </div>
         ))}

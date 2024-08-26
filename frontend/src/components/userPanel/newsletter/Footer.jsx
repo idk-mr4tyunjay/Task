@@ -37,11 +37,11 @@ const Footer = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <h2 className="text-center text-light">
+          <h2 className="text-center text-light fw-semibold">
             Learn more about our listing process as well as our <br />{" "}
             additional staging and design work
           </h2>
-          <button className="w-25 mt-4">newsletter</button>
+          <button className="w-25 mt-4 text-primary fw-semibold rounded">newsletter</button>
         </div>
         <div className="d-flex justify-content-around align-items-center bg-primary p-3 text-light">
           <div className="d-flex align-items-center justify-content-center">
@@ -64,7 +64,7 @@ const Footer = () => {
                 required
                 placeholder="Enter your email"
               />
-              <button type="submit">Subscribe</button>
+              <button type="submit" className="fw-semibold rounded ">Subscribe</button>
             </form>
             {error && <p style={{ color: "red" }}>{error}</p>}
             {success && <p style={{ color: "green" }}>{success}</p>}

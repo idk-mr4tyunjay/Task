@@ -34,6 +34,7 @@ const ClientManager = () => {
           const reader = new FileReader();
           reader.onloadend = () => {
             setForm((prevForm) => ({ ...prevForm, image: reader.result }));
+            console.log("Image set in state:", reader.result); // Debugging log
           };
           reader.readAsDataURL(result);
         },
@@ -46,6 +47,7 @@ const ClientManager = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form data before submission:", form); // Debugging log
     try {
       if (isEditing) {
         await updateClient(form.id, form);
@@ -87,16 +89,17 @@ const ClientManager = () => {
   };
 
   return (
-    <div>
-      <h2 className="mb-4">{isEditing ? 'Update Client' : 'Add New Client'}</h2>
+    <div className="d-flex flex-column align-items-center justify-content-center mt-5">
+  <div className="w-50">
+      <h2 className="mb-4 text-center">{isEditing ? 'Update Client' : 'Add New Client'}</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className="form-label">Client Name</label>
           <input
             type="text"
             className="form-control"
-            name="name"
-            value={form.name}
+            name="name" 
+            value={form.name} 
             onChange={handleInputChange}
             required
           />
@@ -141,11 +144,11 @@ const ClientManager = () => {
           </button>
         )}
       </form>
-
+      </div>
       <h2 className="mt-5">Clients List</h2>
-      <div className="list-group">
+      <div className=" d-flex">
         {clients.map((client) => (
-          <div key={client.id} className="list-group-item d-flex justify-content-between align-items-center">
+          <div key={client.id} className="list-group-item d-flex justify-content-between align-items-center d-flex flex-column flex-wrap">
             <div>
               {client.image && <img src={client.image} alt={client.name} style={{ maxWidth: '100px' }} />}
               <h5 className="mt-2">{client.name}</h5>

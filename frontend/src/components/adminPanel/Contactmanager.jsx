@@ -25,16 +25,16 @@ const ContactManager = () => {
       <ul>
         {contacts.map((contact, index) => (
           <li key={index}>
-            <p>
+            <p className="p-0 m-0">
               <strong>Name:</strong> {contact.fullName}
             </p>
-            <p>
+            <p className="p-0 m-0">
               <strong>Email:</strong> {contact.email}
             </p>
-            <p>
+            <p className="p-0 m-0">
               <strong>Mobile:</strong> {contact.mobile}
             </p>
-            <p>
+            <p className="p-0 m-0">
               <strong>City:</strong> {contact.city}
             </p>
             <hr />

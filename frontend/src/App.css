@@ -1,8 +1,11 @@
 .transparent-background {
-  background-color: rgba(23, 23, 232, 0.5); 
+  background-color: rgba(22, 22, 85, 0.7); 
 }
 .txt-blu{
   color: #3777D3;
+}
+.bg-orange{
+  background-color:#F46D21;
 }
 
 .rotate-90 {
@@ -11,6 +14,22 @@
 .round-image {
   width: 62px;
   height: 62px;
-  border-radius: 50%; /* Makes the image round */
-  object-fit: cover; /* Ensures the image covers the circle without distortion */
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.transparent-input {
+  background-color: transparent; /* Makes the background transparent */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  color: white; /* Keeps text readable */
+}
+
+.transparent-input::placeholder {
+  color: white; /* Makes the placeholder text white */
+  opacity: 1;   /* Ensures the placeholder is fully opaque */
+}
+.transparent-input:focus {
+  background-color: transparent; /* Keeps the background transparent */
+  border: 1px solid rgba(255, 255, 255, 0.7); /* Optional: Slightly different border color if needed */
+  outline: none; /* Removes the default focus outline */
 }

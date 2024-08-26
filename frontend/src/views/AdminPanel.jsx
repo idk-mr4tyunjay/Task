@@ -8,8 +8,10 @@ const AdminPanel = () => {
     <>
     <ProjectManager />
     <ClientManager/>
-    <NewsManager/>
-    <ContactManager/>
+    <div className='d-flex justify-content-around mt-5'>
+      <NewsManager/>
+      <ContactManager/>
+    </div>
     </>
   )
 }
