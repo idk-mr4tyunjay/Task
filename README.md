@@ -1,6 +1,4 @@
-# README.md
-
-## Full-Stack Project Overview
+# Internship task
 
 This project combines a powerful backend and a dynamic frontend, seamlessly integrated to deliver a comprehensive solution. The backend, built with Node.js, Express, and MongoDB, manages data through four models: `Client`, `Project`, `Newsletter`, and `Contact`. The frontend, crafted with React.js and Vite, provides an interactive interface with features like image compression and cropping.
 
